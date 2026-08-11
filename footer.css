@@ -1,0 +1,58 @@
+/* Footer */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 40px 20px 20px;
+}
+
+/* Social Section */
+.socials h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.socials a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 45px;
+    height: 45px;
+
+    margin: 5px;
+    border: 2px solid #55ff80;
+    border-radius: 50%;
+
+    color: #55ff80;
+    font-size: 20px;
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.socials a:hover {
+    background-color: #55ff80;
+    color: #0a0a0a;
+    transform: translateY(-5px);
+}
+
+/* Copyright */
+footer > div:last-child {
+    margin-top: 25px;
+    color: #888;
+    font-size: 14px;
+}
+
+/* Phone */
+@media (max-width: 767px) {
+    .socials h1 {
+        font-size: 20px;
+    }
+
+    .socials a {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+}

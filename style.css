@@ -1,0 +1,296 @@
+/* Body back ground */
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 20% 30%, #1a3a25 0%, transparent 25%),
+        radial-gradient(circle at 80% 70%, #17213d 0%, transparent 25%),
+        radial-gradient(circle at 50% 50%, #301b3d 0%, transparent 20%),
+        #000000;
+
+    background-size: 200% 200%;
+    animation: animeBackground 12s ease-in-out infinite alternate;
+
+    color: white;
+}
+
+@keyframes animeBackground {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 100%;
+    }
+}
+
+
+/* Section Styles */
+/* =========================
+   Home Section
+   ========================= */
+
+.home-section {
+    min-height: 100vh;
+    background: #050505;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Background Glow */
+
+.home-section::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+
+    background: rgba(85, 255, 128, 0.12);
+
+    border-radius: 50%;
+
+    filter: blur(120px);
+
+    top: 10%;
+    left: -150px;
+
+    animation: glowMove 6s ease-in-out infinite alternate;
+}
+
+
+/* Second Glow */
+
+.home-section::after {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+
+    background: rgba(0, 255, 170, 0.08);
+
+    border-radius: 50%;
+
+    filter: blur(100px);
+
+    bottom: -100px;
+    right: -100px;
+}
+
+
+/* =========================
+   Welcome Text
+   ========================= */
+
+.welcome-text {
+    color: #55ff80;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   Main Heading
+   ========================= */
+
+.home-section h1 {
+    font-size: 55px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.name {
+    color: #55ff80;
+}
+
+
+/* =========================
+   Hero Title
+   ========================= */
+
+.hero-title {
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.hero-title span {
+    color: #55ff80;
+}
+
+
+/* =========================
+   Description
+   ========================= */
+
+.hero-description {
+    color: #bdbdbd;
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 600px;
+}
+
+.hero-description strong {
+    color: white;
+}
+
+
+/* =========================
+   Buttons
+   ========================= */
+
+.hero-buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+.hero-buttons .btn {
+    padding: 12px 25px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.hero-buttons .btn-success {
+    background: #55ff80;
+    border-color: #55ff80;
+    color: black;
+}
+
+.hero-buttons .btn-success:hover {
+    background: transparent;
+    color: #55ff80;
+    box-shadow: 0 0 20px rgba(85, 255, 128, 0.4);
+}
+
+.hero-buttons .btn-outline-light:hover {
+    color: black;
+    background: white;
+}
+
+
+/* =========================
+   Profile Card
+   ========================= */
+
+.profile-card {
+    position: relative;
+    padding: 35px 20px;
+
+    border: 1px solid rgba(85, 255, 128, 0.25);
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.03);
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 0 30px rgba(85, 255, 128, 0.08);
+
+    transition: 0.4s;
+}
+
+.profile-card:hover {
+    transform: translateY(-10px);
+
+    border-color: #55ff80;
+
+    box-shadow:
+        0 0 40px rgba(85, 255, 128, 0.2);
+}
+
+
+/* =========================
+   Profile Image
+   ========================= */
+
+.profile-img {
+    width: 230px;
+    height: 230px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 3px solid #55ff80;
+
+    box-shadow:
+        0 0 20px rgba(85, 255, 128, 0.4),
+        0 0 60px rgba(85, 255, 128, 0.15);
+}
+
+
+/* =========================
+   Profile Text
+   ========================= */
+
+.profile-card h2 {
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+.profile-card p {
+    color: #55ff80;
+    font-size: 14px;
+}
+
+
+/* =========================
+   Glow Animation
+   ========================= */
+
+@keyframes glowMove {
+
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(150px, 80px);
+    }
+
+}
+
+
+/* =========================
+   Mobile
+   ========================= */
+
+@media (max-width: 768px) {
+
+    .home-section {
+        padding-top: 100px;
+    }
+
+    .home-section h1 {
+        font-size: 40px;
+    }
+
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .profile-img {
+        width: 190px;
+        height: 190px;
+    }
+
+}
